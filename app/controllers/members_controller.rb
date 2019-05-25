@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+  before_action :login_required
+  
   #会員登録
   def index
     @members = Member.order("number")
